@@ -1,0 +1,1 @@
+This is a personal site which im using as a project to help me learn web dev basics
