@@ -1,22 +1,21 @@
 // This is the main Javascript document for this website, it contains Jquery. More documentation to come
 
 //--------------------------------------------------------------------
-// This function gradually fades in all of the divs in the home page.
-// I still need to make sure that I account for additional pages in the 
-// heirarchy. And I'm sure there is a better way to do this, this looks
-// ug as fuck.
+// This is the main Javascript file for my first personal website. The
+// code contains JQuery, and is not required in order to use the site
+// that it is used by. Because of my background in non-scripted languages
+// and object orientated programming, I have grouped all code into 
+// functions which I then execute in the right order. 
 //
-// TODO: learn how to use cookies to make sure this funciton is only 
-// executed once per website viist. in addition look into ways to fade out
-// other divs from other pages and such. this could get really in dept/
-// cool if done right.
-//
-// for example, on first visit everyhting fades in as is, after this 
-// when visiting each page the header and navigation stays the same and
-// only the content fades in and out.
+// Author: Mason O'Mara
+// Last Edit: 7/25/2012
 //--------------------------------------------------------------------
 $(document).ready(function()
 {
+	
+	//----------------------------------------------------------------
+	// Variable declaration
+	//----------------------------------------------------------------
 	var images = new Array();
 	images[0] = "http://img534.imageshack.us/img534/204/plantsheader.jpg";
 	images[1] = "http://img822.imageshack.us/img822/464/chewdestiny.jpg";
@@ -24,6 +23,13 @@ $(document).ready(function()
 	
 	var x = 0;
 	
+	//----------------------------------------------------------------
+	// This function is used to gradually fade in and out a sequence
+	// of images in the header section of the site. The images are stored
+	// in an array decalred above. For the time being I have the images
+	// hosted on a imageshack account located at: http://imageshack.us/homepage/?user=masonoh91
+	// TODO: randomize the sequence, host images locally once site is live
+	//----------------------------------------------------------------
 	function headerChange()
 	{	
 		$(".indexHeader").fadeOut(1000, function()
@@ -36,6 +42,11 @@ $(document).ready(function()
 		setTimeout(headerChange, 10000);
 	}
 	
+	//---------------------------------------------------------------
+	// This function gradually fades in the divs on page load
+	// TODO: only do this once on home page viist, then just fade in 
+	// everything below header information, if possible
+	//---------------------------------------------------------------
 	function initialFade()
 	{
 		$(".title").hide();
