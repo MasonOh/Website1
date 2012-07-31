@@ -88,7 +88,7 @@ ul.photoReel {
 	list-style-type: none; 
 	margin-left:-20px;}
 	
-li.photoReel {
+ul.photoReel > li {
 	padding-top: 5px;
 	padding-bottom: 5px;
 	cursor: pointer;}

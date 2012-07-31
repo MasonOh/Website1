@@ -107,33 +107,39 @@ $(document).ready(function()
 	//--------------------------------------------------------------------
 	function photoCycle()
 	{
-		$(".photoThumb1").click(function() 
+		$("ul.photoReel > li").click(function()
 		{
+			var photoId = $(this).attr('id');
+			
 			$(".photoDisplay").fadeOut(800, function()
 			{
-				document.getElementById("photoDisplayFrame").src= "http://img232.imageshack.us/img232/6717/alreadytherefull.jpg";
+				switch(photoId)
+				{
+					case "photoThumb1":
+						document.getElementById("photoDisplayFrame").src = "http://img232.imageshack.us/img232/6717/alreadytherefull.jpg";
+						break;
+						
+					case "photoThumb2":
+						document.getElementById("photoDisplayFrame").src = "http://img26.imageshack.us/img26/5752/earthquakefull.jpg";
+						break;
+				}
 				$(".photoDisplay").fadeIn(800);
 			});
-			$(".photoDesc").fadeOut(1000, function() 
-			{									   
-				document.getElementById("photoTitle").innerHTML="Title: Already There";
-				document.getElementById("photoDesc").innerHTML="This photo was the 2nd in a failed 52 week project. Inspired by Meatyard.";
-				$(".photoDesc").fadeIn(1000);
-			});
-		});
-		
-		$(".photoThumb2").click(function()
-		{
-			$(".photoDisplay").fadeOut(800, function()
+			
+			$(".photoDesc").fadeOut(1000, function()
 			{
-				document.getElementById("photoDisplayFrame").src = "http://img26.imageshack.us/img26/5752/earthquakefull.jpg";
-				$(".photoDisplay").fadeIn(800);
-	
-			});
-			$(".photoDesc").fadeOut(1000, function() 
-			{
-				document.getElementById("photoTitle").innerHTML="Title: Earthquake";
-				document.getElementById("photoDesc").innerHTML="This photo was the 1st in a failed 52 week project. Inspired by Meatyard and Deerhunter's Halcyon Digest.";
+				switch(photoId)
+				{
+					case "photoThumb1":
+						document.getElementById("photoTitle").innerHTML="Title: Already There";
+						document.getElementById("photoDesc").innerHTML="This photo was the 2nd in a failed 52 week project. Inspired by Meatyard.";
+						break;
+						
+					case "photoThumb2":
+						document.getElementById("photoTitle").innerHTML="Title: Earthquake";
+						document.getElementById("photoDesc").innerHTML="This photo was the 1st in a failed 52 week project. Inspired by Meatyard and Deerhunter's Halcyon Digest.";
+						break;
+				}
 				$(".photoDesc").fadeIn(1000);
 			});
 		});
