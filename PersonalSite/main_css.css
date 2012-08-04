@@ -82,7 +82,8 @@ div.photoReel {
 	height: 560px;
 	margin-top: 20px;
 	border-top: 2px dashed rgb(240, 240, 240);
-	border-bottom: 2px dashed rgb(240, 240, 240); }
+	border-bottom: 2px dashed rgb(240, 240, 240);
+	overflow: scroll;}
 	
 ul.photoReel {
 	list-style-type: none; 

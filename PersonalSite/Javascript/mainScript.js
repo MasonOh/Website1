@@ -116,11 +116,33 @@ $(document).ready(function()
 				switch(photoId)
 				{
 					case "photoThumb1":
-						document.getElementById("photoDisplayFrame").src = "http://img232.imageshack.us/img232/6717/alreadytherefull.jpg";
+						document.getElementById("photoDisplayFrame").src = "Photos/AlreadyThere_Full.jpg";
+						//document.getElementById("photoDispalyFrame").title = "Alraedy There";
+						document.getElementById("photoLink").href = "http://www.flickr.com/photos/masonoh/6275196820/in/photostream";
 						break;
 						
 					case "photoThumb2":
-						document.getElementById("photoDisplayFrame").src = "http://img26.imageshack.us/img26/5752/earthquakefull.jpg";
+						document.getElementById("photoDisplayFrame").src = "Photos/Earthquake_Full.jpg";
+						//document.getElementById("photoDisplayFrame").title = "Earthquake";
+						document.getElementById("photoLink").href = "http://www.flickr.com/photos/masonoh/6255898909/in/photostream";
+						break;
+						
+					case "photoThumb3":
+						document.getElementById("photoDisplayFrame").src = "Photos/PhantogramFull.jpg";
+						//document.getElementById("photoDispalyFrame").title = "Untitled";
+						document.getElementById("photoLink").href = "http://www.flickr.com/photos/masonoh/7606989438/in/photostream";
+						break;
+						
+					case "photoThumb4":
+						document.getElementById("photoDisplayFrame").src = "Photos/Replica_Full.jpg";
+						//document.getElementById("photoDispalyFrame").title = "Replica";
+						document.getElementById("photoLink").href = "http://www.flickr.com/photos/masonoh/7676340440/in/photostream";
+						break;
+						
+					case "photoThumb5":
+						document.getElementById("photoDisplayFrame").src = "Photos/Ashley_Full.jpg";
+						//document.getElementById("photoDispalyFrame").title = "Replica";
+						document.getElementById("photoLink").href = "http://www.flickr.com/photos/masonoh/7676413290/in/photostream";
 						break;
 				}
 				$(".photoDisplay").fadeIn(800);
@@ -138,6 +160,21 @@ $(document).ready(function()
 					case "photoThumb2":
 						document.getElementById("photoTitle").innerHTML="Title: Earthquake";
 						document.getElementById("photoDesc").innerHTML="This photo was the 1st in a failed 52 week project. Inspired by Meatyard and Deerhunter's Halcyon Digest.";
+						break;
+						
+					case "photoThumb3":
+						document.getElementById("photoTitle").innerHTML="Title: Untitled";
+						document.getElementById("photoDesc").innerHTML="A simple self portrait taken on UW-Platteville's campus.";
+						break;
+						
+					case "photoThumb4":
+						document.getElementById("photoTitle").innerHTML="Title: Replica";
+						document.getElementById("photoDesc").innerHTML="A conceptual self-portrait taken behind Platteville's Main Street.";
+						break;
+						
+					case "photoThumb5":
+						document.getElementById("photoTitle").innerHTML="Title: Untitled";
+						document.getElementById("photoDesc").innerHTML="Ashley enjoying some Noodle's n' Company!";
 						break;
 				}
 				$(".photoDesc").fadeIn(1000);
