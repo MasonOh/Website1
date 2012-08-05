@@ -17,9 +17,9 @@ $(document).ready(function()
 	// Variable declaration
 	//----------------------------------------------------------------
 	var images = new Array();
-	images[0] = "http://img534.imageshack.us/img534/204/plantsheader.jpg";
-	images[1] = "http://img822.imageshack.us/img822/464/chewdestiny.jpg";
-	images[2] = "http://img802.imageshack.us/img802/598/leavesontree.jpg";
+	images[0] = "../Photos/PlantsHeader.jpg";
+	images[1] = "../Photos/ChewDestiny.jpg";
+	images[2] = "../Photos/LeavesOnTree.jpg";
 
 	var x = 0;
 
@@ -117,7 +117,7 @@ $(document).ready(function()
 				{
 					case "photoThumb1":
 						document.getElementById("photoDisplayFrame").src = "Photos/AlreadyThere_Full.jpg";
-						//document.getElementById("photoDispalyFrame").title = "Alraedy There";
+						//document.getElementById("photoDispalyFrame").title = "Already There";
 						document.getElementById("photoLink").href = "http://www.flickr.com/photos/masonoh/6275196820/in/photostream";
 						break;
 
@@ -141,7 +141,7 @@ $(document).ready(function()
 
 					case "photoThumb5":
 						document.getElementById("photoDisplayFrame").src = "Photos/Ashley_Full.jpg";
-						//document.getElementById("photoDispalyFrame").title = "Replica";
+						//document.getElementById("photoDispalyFrame").title = "Untitled";
 						document.getElementById("photoLink").href = "http://www.flickr.com/photos/masonoh/7676413290/in/photostream";
 						break;
 				}
@@ -196,6 +196,7 @@ $(document).ready(function()
 		$(".indexNavigation ul:eq(0)").show();
 	}
 
+	
 	initialFade();
 	headerChange();
 	photoCycle();
