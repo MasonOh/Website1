@@ -12,7 +12,7 @@
 //--------------------------------------------------------------------
 $(document).ready(function()
 {
-	
+
 	//----------------------------------------------------------------
 	// Variable declaration
 	//----------------------------------------------------------------
@@ -20,9 +20,9 @@ $(document).ready(function()
 	images[0] = "http://img534.imageshack.us/img534/204/plantsheader.jpg";
 	images[1] = "http://img822.imageshack.us/img822/464/chewdestiny.jpg";
 	images[2] = "http://img802.imageshack.us/img802/598/leavesontree.jpg";
-	
+
 	var x = 0;
-	
+
 	//----------------------------------------------------------------
 	// This function is used to gradually fade in and out a sequence
 	// of images in the header section of the site. The images are stored
@@ -41,7 +41,7 @@ $(document).ready(function()
 		$(".indexHeader").fadeIn(1000);
 		setTimeout(headerChange, 10000);
 	}
-	
+
 	//---------------------------------------------------------------
 	// This function gradually fades in the divs on page load
 	// TODO: only do this once on home page viist, then just fade in 
@@ -59,7 +59,7 @@ $(document).ready(function()
 		$(".aboutParagraph").hide();
 		$(".aboutList").hide();
 		$(".aboutPhoto").hide();
-		
+
 		$(".title").fadeIn(300, function() 
 		{ 
 			$(".indexHeader").fadeIn(300, function()
@@ -77,7 +77,7 @@ $(document).ready(function()
 									$(".photoDesc").fadeIn(300);
 								});
 							});
-							
+
 							$(".aboutParagraph").fadeIn(300, function()
 							{
 								$(".aboutList").fadeIn(300, function()
@@ -91,7 +91,7 @@ $(document).ready(function()
 			});
 		});
 	}
-	
+
 	//--------------------------------------------------------------------
 	// This function fades in a photo in the reel, changes it and it's 
 	// description, and then fades the new content in. I tried doing this with
@@ -110,7 +110,7 @@ $(document).ready(function()
 		$("ul.photoReel > li").click(function()
 		{
 			var photoId = $(this).attr('id');
-			
+
 			$(".photoDisplay").fadeOut(800, function()
 			{
 				switch(photoId)
@@ -120,25 +120,25 @@ $(document).ready(function()
 						//document.getElementById("photoDispalyFrame").title = "Alraedy There";
 						document.getElementById("photoLink").href = "http://www.flickr.com/photos/masonoh/6275196820/in/photostream";
 						break;
-						
+
 					case "photoThumb2":
 						document.getElementById("photoDisplayFrame").src = "Photos/Earthquake_Full.jpg";
 						//document.getElementById("photoDisplayFrame").title = "Earthquake";
 						document.getElementById("photoLink").href = "http://www.flickr.com/photos/masonoh/6255898909/in/photostream";
 						break;
-						
+
 					case "photoThumb3":
 						document.getElementById("photoDisplayFrame").src = "Photos/PhantogramFull.jpg";
 						//document.getElementById("photoDispalyFrame").title = "Untitled";
 						document.getElementById("photoLink").href = "http://www.flickr.com/photos/masonoh/7606989438/in/photostream";
 						break;
-						
+
 					case "photoThumb4":
 						document.getElementById("photoDisplayFrame").src = "Photos/Replica_Full.jpg";
 						//document.getElementById("photoDispalyFrame").title = "Replica";
 						document.getElementById("photoLink").href = "http://www.flickr.com/photos/masonoh/7676340440/in/photostream";
 						break;
-						
+
 					case "photoThumb5":
 						document.getElementById("photoDisplayFrame").src = "Photos/Ashley_Full.jpg";
 						//document.getElementById("photoDispalyFrame").title = "Replica";
@@ -147,7 +147,7 @@ $(document).ready(function()
 				}
 				$(".photoDisplay").fadeIn(800);
 			});
-			
+
 			$(".photoDesc").fadeOut(1000, function()
 			{
 				switch(photoId)
@@ -156,22 +156,22 @@ $(document).ready(function()
 						document.getElementById("photoTitle").innerHTML="Title: Already There";
 						document.getElementById("photoDesc").innerHTML="This photo was the 2nd in a failed 52 week project. Inspired by Meatyard.";
 						break;
-						
+
 					case "photoThumb2":
 						document.getElementById("photoTitle").innerHTML="Title: Earthquake";
 						document.getElementById("photoDesc").innerHTML="This photo was the 1st in a failed 52 week project. Inspired by Meatyard and Deerhunter's Halcyon Digest.";
 						break;
-						
+
 					case "photoThumb3":
 						document.getElementById("photoTitle").innerHTML="Title: Untitled";
 						document.getElementById("photoDesc").innerHTML="A simple self portrait taken on UW-Platteville's campus.";
 						break;
-						
+
 					case "photoThumb4":
 						document.getElementById("photoTitle").innerHTML="Title: Replica";
 						document.getElementById("photoDesc").innerHTML="A conceptual self-portrait taken behind Platteville's Main Street.";
 						break;
-						
+
 					case "photoThumb5":
 						document.getElementById("photoTitle").innerHTML="Title: Untitled";
 						document.getElementById("photoDesc").innerHTML="Ashley enjoying some Noodle's n' Company!";
@@ -181,7 +181,7 @@ $(document).ready(function()
 			});
 		});
 	}
-	
+
 	//accordian testing
 	function accordianMenus()
 	{
@@ -195,8 +195,7 @@ $(document).ready(function()
 		});
 		$(".indexNavigation ul:eq(0)").show();
 	}
-	
-	//main
+
 	initialFade();
 	headerChange();
 	photoCycle();

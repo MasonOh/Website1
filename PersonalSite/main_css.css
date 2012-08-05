@@ -12,7 +12,7 @@ p, li {
 	font-weight: normal;
 	font-size: 12px;
 	font-style: normal; }
-	
+
 h1 {
 	color: rgb(240, 240, 240);
 	font-family: Helvetica, Arial, sans-serif;
@@ -25,80 +25,81 @@ h1 {
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 50px; }
-	
+
 /* LINKS */
 
 a:link {
 	color: rgb(240, 240, 240);
 	text-decoration: none; }
-	
+
 a:visited {
 	color: rgb(255, 203, 203);
 	text-decoration: none; }
-	
+
 a:hover {
 	color: rgb(205, 255, 205); }
-	
+
 /* Home layout css */
 
 	/*Header and Navigation */
-	
+
 div.title {
 	width: inherit; }
-	
+
 div.indexHeader {
 	width: 700px;
 	height: 175px;
 	border: 2px solid rgb(240, 240, 240);
 	margin-top: -20px;}
-	
+
 div.indexNavigation {
 	width: 220px; 
 	margin-top: -195px; 
 	margin-left: 665px;
 	position: absolute;}
-	
+
 .indexNavigation ul { 
 	list-style-type: none;
 	list-style-image: none; }
-	
+
 .indexNavigation li {
 	margin: 5px;
 	cursor: pointer;}
-	
+
 .indexNavigation li > ul {
 	display: none; }
-	
+
 div.indexHeaderSeparation {
 	width: 940px;
 	border-bottom: 2px solid rgb(240, 240, 240);
 	margin-top: 10px; }
-	
+
 	/*Photo reel, display, and description*/
-	
+
 div.photoReel {
 	float: left;
 	width: 140px; 
 	height: 560px;
 	margin-top: 20px;
 	border-top: 2px dashed rgb(240, 240, 240);
-	border-bottom: 2px dashed rgb(240, 240, 240);}
-	
+	border-bottom: 2px dashed rgb(240, 240, 240);
+	padding-top: 20px;
+	padding-bottom: 20px;}
+
 ul.photoReel {
 	list-style-type: none; 
-	margin-left:-20px;}
-	
+	margin-left:-20px;
+	margin-top: -10px;}
+
 ul.photoReel > li {
-	padding-top: 5px;
-	padding-bottom: 5px;
 	cursor: pointer;}
-		
+
 div.photoDisplay {
 	width: 540px;
 	float: left; 
 	margin-top: 20px;
 	margin-left: 20px; }
-	
+
 div.photoDesc {
 	width: 220px;
 	float: right;
@@ -110,13 +111,13 @@ div.aboutList {
 	width: 620px;
 	float: left; 
 	margin-top: 20px; }
-	
+
 div.aboutPhoto {
 	width: 300px;
 	height: 300px;
 	float: right;
 	margin-top: 20px; }
-	
+
 /* contact page testing */
 
 .scrollTesting {
