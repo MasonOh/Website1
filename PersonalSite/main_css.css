@@ -117,11 +117,3 @@ div.aboutPhoto {
 	height: 300px;
 	float: right;
 	margin-top: 20px; }
-
-/* contact page testing */
-
-.scrollTesting {
-	width: 940px;
-	height: 100px;
-	border: 2px solid rgb(240, 240, 240);
-	margin-top: 20px;}
