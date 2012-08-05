@@ -12,7 +12,12 @@ design practices." />
 <meta name="author" content="Mason O'Mara" />
 
 <link href="main_css.css" type="text/css" rel="stylesheet" />
-<script type="text/javascript" src="Javascript/jquery.js"></script>
+<link href="Javascript/jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css" />
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+<script src="Javascript/jquery.mousewheel.min.js"></script>
+<script src="Javascript/jquery.mCustomScrollbar.js"></script>
 <script type="text/javascript" src="Javascript/mainScript.js"></script>
 
 </head>
@@ -47,7 +52,7 @@ design practices." />
         </ul>
     </li>
 	<li><a href="About/about.html">About</a></li>
-	<li><a href="" onClick="headerChange();">Contact</a></li>
+	<li><a href="Contact/contact.html">Contact</a></li>
 </ul>
 </div>
 
@@ -55,26 +60,28 @@ design practices." />
 </div>
 
 <div class="photoReel">
-<ul class="photoReel">
-    <li id="photoThumb1"><img src="Photos/AlreadyThere_PhotoReel.jpg" alt="Distorted photo in black and white, tumbnail" title="Already There" /></li>
-    <li id="photoThumb2"><img src="Photos/Earthquake_PhotoReel.jpg" alt="Distorted photo of feet in black and white, tumbnail" title="Earthquake" /></li>
-    <li id="photoThumb3"><img src="Photos/PhantogramThumb.jpg" alt="" title="Untitled self-portrait" /></li>
-    <li id="photoThumb4"><img src="Photos/ReplicaThumb.jpg" alt="" title="Replica" /></li>
-    <li id="photoThumb5"><img src="Photos/AshleyThumb.jpg" alt="" title="Untitled" /></li>
-</ul>
+    <ul class="photoReel">
+        <li id="photoThumb1"><img src="Photos/AlreadyThere_PhotoReel.jpg" alt="Distorted photo in black and white, tumbnail" title="Already There" /></li>
+        <li id="photoThumb2"><img src="Photos/Earthquake_PhotoReel.jpg" alt="Distorted photo of feet in black and white, tumbnail" title="Earthquake" /></li>
+        <li id="photoThumb3"><img src="Photos/PhantogramThumb.jpg" alt="" title="Untitled self-portrait" /></li>
+        <li id="photoThumb4"><img src="Photos/ReplicaThumb.jpg" alt="" title="Replica" /></li>
+        <li id="photoThumb5"><img src="Photos/AshleyThumb.jpg" alt="" title="Untitled" /></li>
+        <li id="photoThumb5"><img src="Photos/AshleyThumb.jpg" alt="" title="Untitled" /></li>
+        <li id="photoThumb5"><img src="Photos/AshleyThumb.jpg" alt="" title="Untitled" /></li>
+    </ul>
 </div>
 
 <div class="photoDisplay">
-<a href="http://www.flickr.com/photos/masonoh/6275196820/in/photostream" id="photoLink">
-<img id="photoDisplayFrame" src="Photos/AlreadyThere_Full.jpg" alt="" title="Already There" />
-</a>
+    <a href="http://www.flickr.com/photos/masonoh/6275196820/in/photostream" id="photoLink">
+    	<img id="photoDisplayFrame" src="Photos/AlreadyThere_Full.jpg" alt="" title="Already There" />
+    </a>
 </div>
 
 <div class="photoDesc">
-<p id="photoTitle">Title: Already There</p>
-<p id="photoDesc">This photo was the 2nd in a failed 52 week project. Inspired by Meatyard.</p>
+    <p id="photoTitle">Title: Already There</p>
+    <p id="photoDesc">This photo was the 2nd in a failed 52 week project. Inspired by Meatyard.</p>
+</div>
 </div>
 
-</div>
 </body>
 </html>

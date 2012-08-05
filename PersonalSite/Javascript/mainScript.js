@@ -197,7 +197,6 @@ $(document).ready(function()
 	}
 	
 	//main
-	
 	initialFade();
 	headerChange();
 	photoCycle();

@@ -82,8 +82,7 @@ div.photoReel {
 	height: 560px;
 	margin-top: 20px;
 	border-top: 2px dashed rgb(240, 240, 240);
-	border-bottom: 2px dashed rgb(240, 240, 240);
-	overflow: scroll;}
+	border-bottom: 2px dashed rgb(240, 240, 240);}
 	
 ul.photoReel {
 	list-style-type: none; 
@@ -117,3 +116,11 @@ div.aboutPhoto {
 	height: 300px;
 	float: right;
 	margin-top: 20px; }
+	
+/* contact page testing */
+
+.scrollTesting {
+	width: 940px;
+	height: 100px;
+	border: 2px solid rgb(240, 240, 240);
+	margin-top: 20px;}
