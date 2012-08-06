@@ -152,6 +152,11 @@ $(document).ready(function()
 						document.getElementById("photoDisplayFrame").src = "Photos/Ashley_Full.jpg";
 						document.getElementById("photoLink").href = "http://www.flickr.com/photos/masonoh/7676413290/in/photostream";
 						break;
+						
+					case "photoThumb6":
+						document.getElementById("photoDisplayFrame").src = "Photos/ChewmanFull.jpg";
+						document.getElementById("photoLink").href = "http://www.flickr.com/photos/masonoh/7722299532/in/photostream";
+						break;
 				}
 				$(".photoDisplay").fadeIn(800);
 			});
@@ -183,6 +188,11 @@ $(document).ready(function()
 					case "photoThumb5":
 						document.getElementById("photoTitle").innerHTML="Title: Untitled";
 						document.getElementById("photoDesc").innerHTML="Ashley enjoying some Noodle's n' Company!";
+						break;
+					
+					case "photoThumb6":
+						document.getElementById("photoTitle").innerHTML="Title: Untitled";
+						document.getElementById("photoDesc").innerHTML="Chewman modeling during a lighting studio assignment for Photo II.";
 						break;
 				}
 				$(".photoDesc").fadeIn(1000);
