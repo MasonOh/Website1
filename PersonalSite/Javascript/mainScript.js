@@ -34,7 +34,7 @@ $(document).ready(function()
 	{	
 		$(".indexHeader").fadeOut(1000, function()
 		{
-			document.getElementById("testing").src = images[x++];
+			document.getElementById("headerImage").src = images[x++];
 			if(x >= images.length)
 				x = 0;
 		});
@@ -42,10 +42,23 @@ $(document).ready(function()
 		setTimeout(headerChange, 10000);
 	}
 
+/*
 	//---------------------------------------------------------------
 	// This function gradually fades in the divs on page load
-	// TODO: only do this once on home page viist, then just fade in 
-	// everything below header information, if possible
+	//
+	// TODO: Until I can have both this and the custom scroll bars
+	// I'm going to prioitize the scroll bars. The problem is that
+	// when things are initially hidden the plugin cannot determine the
+	// size of the div (because it's hidden) and thus doesn't construct
+	// a scrollbar. You then can only see what is initially loaded into the 
+	// list. But, if the list is not initially hidden then the animation
+	// is meaningless. Perhaps look into the update() funciton or manually
+	// determining the size of the scroll. 
+	//
+	// NOTE: After stopping the usage of this function, not only do 
+	// my scroll bars work, but my site loads significantly faster.
+	// I'm going to discontinue its use, but keep it commented out for a 
+	// while incase I can find a use for it.
 	//---------------------------------------------------------------
 	function initialFade()
 	{
@@ -91,7 +104,7 @@ $(document).ready(function()
 			});
 		});
 	}
-
+*/
 	//--------------------------------------------------------------------
 	// This function fades in a photo in the reel, changes it and it's 
 	// description, and then fades the new content in. I tried doing this with
@@ -117,31 +130,26 @@ $(document).ready(function()
 				{
 					case "photoThumb1":
 						document.getElementById("photoDisplayFrame").src = "Photos/AlreadyThere_Full.jpg";
-						//document.getElementById("photoDispalyFrame").title = "Already There";
 						document.getElementById("photoLink").href = "http://www.flickr.com/photos/masonoh/6275196820/in/photostream";
 						break;
 
 					case "photoThumb2":
 						document.getElementById("photoDisplayFrame").src = "Photos/Earthquake_Full.jpg";
-						//document.getElementById("photoDisplayFrame").title = "Earthquake";
 						document.getElementById("photoLink").href = "http://www.flickr.com/photos/masonoh/6255898909/in/photostream";
 						break;
 
 					case "photoThumb3":
 						document.getElementById("photoDisplayFrame").src = "Photos/PhantogramFull.jpg";
-						//document.getElementById("photoDispalyFrame").title = "Untitled";
 						document.getElementById("photoLink").href = "http://www.flickr.com/photos/masonoh/7606989438/in/photostream";
 						break;
 
 					case "photoThumb4":
 						document.getElementById("photoDisplayFrame").src = "Photos/Replica_Full.jpg";
-						//document.getElementById("photoDispalyFrame").title = "Replica";
 						document.getElementById("photoLink").href = "http://www.flickr.com/photos/masonoh/7676340440/in/photostream";
 						break;
 
 					case "photoThumb5":
 						document.getElementById("photoDisplayFrame").src = "Photos/Ashley_Full.jpg";
-						//document.getElementById("photoDispalyFrame").title = "Untitled";
 						document.getElementById("photoLink").href = "http://www.flickr.com/photos/masonoh/7676413290/in/photostream";
 						break;
 				}
@@ -195,10 +203,19 @@ $(document).ready(function()
 		});
 		$(".indexNavigation ul:eq(0)").show();
 	}
-
 	
-	initialFade();
-	headerChange();
+	function scrollBarLoading()
+	{
+		(function($){
+        $(window).load(function(){
+            $("div.photoReel").mCustomScrollbar();
+        });
+   		})(jQuery);	
+	}
+
+	scrollBarLoading();
+	setTimeout(headerChange, 10000);
 	photoCycle();
 	accordianMenus();
+	
 });
