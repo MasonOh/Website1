@@ -23,6 +23,7 @@ design practices." />
 </head>
 
 <body>
+<?php
 
 <div class="indexMain">
 
@@ -60,16 +61,14 @@ design practices." />
 <div class="indexHeaderSeparation">
 </div>
 
-<div class="phptesting">
-    <form action="testing.php" method="post">
-        <p>Shoot me an email:</p>
-        <p>Subject: <input type="text" name="subject" /></p>
-        <p>Body: <input type="text" name="body" /></p>
-        <p><input type="submit" /></p>
-    </form>
+	$subject = $_POST['subject'];
+	$body = $_POST['body'];
+	 
+	mail("mail@masonoh.net63.net", "contact:  $subject", $body)
+	
+	<p>Thank you!</p>
 </div>
-
-</div>
+?>
 
 </body>
 </html>
