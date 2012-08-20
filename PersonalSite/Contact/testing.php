@@ -23,7 +23,6 @@ design practices." />
 </head>
 
 <body>
-<?php
 
 <div class="indexMain">
 
@@ -61,14 +60,15 @@ design practices." />
 <div class="indexHeaderSeparation">
 </div>
 
+<div class="contactThankYou">
+<p>Thank you!</p>
+</div>
+</div>
+<?php
 	$subject = $_POST['subject'];
 	$body = $_POST['body'];
 	 
-	mail("mail@masonoh.net63.net", "contact:  $subject", $body)
-	
-	<p>Thank you!</p>
-</div>
+	mail("mail@masonoh.net63.net", "contact:  $subject", $body);
 ?>
-
 </body>
 </html>
